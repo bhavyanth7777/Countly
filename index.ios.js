@@ -24,7 +24,7 @@ class Countly extends Component {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>
-            +
+            -
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
