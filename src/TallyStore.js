@@ -1,3 +1,5 @@
+// Import Event Emitter
+import EventEmitter from 'EventEmitter';
 // Import the dispatcher
 import Dispatcher from './Dispatcher';
 
@@ -20,10 +22,20 @@ const zero = () => {
 }
 
 
-class TallyStore {
+class TallyStore extends EventEmitter {
     getTally(){
         return Object.assign({}, tally);
     }
+    // Public Functions
+    addChangeListener(callback) { 
+    this.addListener('CHANGE', callback); 
+  } 
+    removeChangeListener(callback) { 
+    this.removeListener('CHANGE', callback); 
+  } 
+    emitChange() { 
+    this.emit('CHANGE'); 
+  } 
 }
 
 // Receive action and call appropriate function
