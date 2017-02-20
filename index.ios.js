@@ -6,7 +6,7 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
-
+import { Provider } from 'react-redux';
 import { increment, decrement, zero } from './src/actions';
 import store from './src/store';
 
